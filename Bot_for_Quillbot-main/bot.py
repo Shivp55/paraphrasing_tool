@@ -31,9 +31,9 @@ for line in f:
 							ignored_exceptions=[NoSuchElementException,
 												ElementNotVisibleException,
 												ElementNotSelectableException])
-	Element = wait.until(EC.visibility_of_element_located((By.XPATH, '//div[@id="articleTextArea"]')))
+	Element = wait.until(EC.visibility_of_element_located((By.XPATH, '//div[@id="outputText"]')))
 	print("Pasting Paragraph: %d" %(i+1))
-	quilled = driver.find_element(By.XPATH, '//div[@id="articleTextArea"]')
+	quilled = driver.find_element(By.XPATH, '//div[@id="outputText"]')
 	w.write(quilled.text)
 	w.write("\n")
 	i=i+1
